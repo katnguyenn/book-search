@@ -19,6 +19,15 @@ module.export = {
             res.status(422).json(err);
         })
     
+    },
+
+    save: function(req, res) {
+        db.Book.create(req.body)
+        .then(dbModel => res.json(dbModel))
+        .catch(err => {
+            console.log(err);
+            res.status(422).json(err)
+        })
     }
     
 
