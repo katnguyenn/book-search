@@ -28,6 +28,16 @@ module.export = {
             console.log(err);
             res.status(422).json(err)
         })
+    },
+
+    remove: function (req, res) {
+        db.Book.findById({ id: req.params.id })
+        .then(db => dbModel.remove())
+        .then(dbModel => res.json(dbModel))
+        .catch(err => {
+            console.log(err);
+            res.status(422).json(err)
+        })
     }
     
 
