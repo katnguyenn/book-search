@@ -11,7 +11,23 @@ const Home = () => {
     });
 
 
+const handleSearchChange = event => {
+    const { name, value } = event.target;
+       setDataSearch({
+           ...dataSearch,
+           [name]: value
+       })
+       console.log(value)
+}
 
+
+return (
+    <Wrapper>
+        <SearchBar handleInputChange={handleSearchChange} />
+      
+      
+    </Wrapper>
+)
 
 }
 
