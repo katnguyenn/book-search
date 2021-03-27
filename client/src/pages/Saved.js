@@ -39,7 +39,7 @@ const Saved = () => {
 
     return (
         <Wrapper>
-               {console.log("hello", book)}
+              
             { book.length > 0 ?   book.map(book => {
              
                 return (

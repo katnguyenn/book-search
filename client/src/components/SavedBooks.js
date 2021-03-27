@@ -12,7 +12,7 @@ const SavedBooks = ({book, removeBook}) => {
             <Card.Body>
                 <Row>
                     {book.title ? <>  <Col sm="2">
-                       {console.log("book",book)}
+                      
                         <Card.Img style={{width: "100%"}} className="" variant="top" src={book.image} />
                     </Col>
                     <Col sm="10">

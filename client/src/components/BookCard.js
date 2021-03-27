@@ -11,7 +11,7 @@ const BookCard = ({book, handleSavedBook}) => {
             <Card.Body>
                 <Row>
                     <Col sm="2">
-                        {console.log(book)}
+                       
                         <Card.Img style={{width: "100%"}} className="" variant="top" src={book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : "https://st4.depositphotos.com/14953852/22772/v/1600/depositphotos_227725020-stock-illustration-image-available-icon-flat-vector.jpg"} />
                     </Col>
                     <Col sm="10">
