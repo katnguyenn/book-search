@@ -16,9 +16,9 @@ const SavedBooks = ({book, removeBook}) => {
                         <Card.Img style={{width: "100%"}} className="" variant="top" src={book.image} />
                     </Col>
                     <Col sm="10">
-                        {/* <a href={book.volumeInfo.infoLink}>View</a> */}
+                     
                         <div className="book-buttons">
-                        <Button href={book.infoLink}>View</Button>
+                        <Button href={book.link}>View</Button>
                         <Button onClick={() => removeBook(book._id)}>Delete</Button>
                         </div>
                         <Card.Title>{book.title}</Card.Title>
@@ -31,7 +31,7 @@ const SavedBooks = ({book, removeBook}) => {
                         <Card.Img style={{width: "100%"}} className="" variant="top" src={book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : "https://st4.depositphotos.com/14953852/22772/v/1600/depositphotos_227725020-stock-illustration-image-available-icon-flat-vector.jpg"} />
                     </Col>
                     <Col sm="10">
-                        {/* <a href={book.volumeInfo.infoLink}>View</a> */}
+                        
                         <div className="book-buttons">
                         <Button href={book.volumeInfo.infoLink}>View</Button>
                         <Button onClick={() => removeBook(book._id)}>Delete</Button>
