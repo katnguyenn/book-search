@@ -2,9 +2,12 @@ const db = require("../models");
 
 module.exports = {
     findAll: function (req, res) {
-        db.Book.find(req.query)
-            .sort({ date: -1 })
-            .then(dbModel => res.json(dbModel))
+        db.Book.find()
+         
+            .then(dbModel => {
+                console.log(dbModel)
+                res.json(dbModel)
+            })
             .catch(err => {
                 console.log(err);
                 res.status(422).json(err);
@@ -12,7 +15,7 @@ module.exports = {
     }, 
 
     findOne: function(req, res) {
-        db.Book.find({id: req.params.id})
+        db.Book.findById(req.params.id)
         .then(dbModel => res.json(dbModel))
         .catch(err => {
             console.log(err);
@@ -31,7 +34,7 @@ module.exports = {
     },
 
     remove: function (req, res) {
-        db.Book.findById({ id: req.params.id })
+        db.Book.findById({ _id: req.params.id })
         .then(dbModel => dbModel.remove())
         .then(dbModel => res.json(dbModel))
         .catch(err => {

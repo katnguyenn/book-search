@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import NavTitle from "./NavTitle";
+import "../styles/Nav.css";
 
 function Nav() {
    
     return (
+        <>
+        <div className="nav">
+            <h1>Google Books</h1>
         <ul className="nav nav-tabs">
             <li className="nav-item">
                 <Link to="/search" className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}>
@@ -16,6 +21,11 @@ function Nav() {
                     </Link>
             </li>
         </ul>
+       
+        </div>
+        <NavTitle />
+        </>
+         
     )
 }
 

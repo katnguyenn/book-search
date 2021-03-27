@@ -1,10 +1,11 @@
 import React from "react";
+import "../styles/SearchBar.css";
 
 const SearchBar = (prop) => {
     return (
 
         <div className="searchbox">
-            <span className="searchtitle">Search</span>
+            <span className="searchtitle"></span>
             <input
                 id="search"
                 className="search-control"
