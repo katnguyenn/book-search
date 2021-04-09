@@ -50,8 +50,10 @@ const Home = () => {
         API.saveBook(newBook)
         .then(response => console.log(response))
         
+        
             
-            .catch(err => console.log(err));
+            .catch(err => console.log(err))
+            alert("Your book has been saved!")
     }
   
 
