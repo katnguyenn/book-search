@@ -17,7 +17,7 @@ const BookCard = ({book, handleSavedBook}) => {
                     <Col sm="10">
                         {/* <a href={book.volumeInfo.infoLink}>View</a> */}
                         <div className="book-buttons">
-                        <Button href={book.volumeInfo.infoLink}>View</Button>
+                        <Button href={book.volumeInfo.infoLink} target="_blank">View</Button>
                         <Button onClick={() => handleSavedBook(book)}>Save</Button>
                         </div>
                         <Card.Title>{book.volumeInfo.title}</Card.Title>
