@@ -14,6 +14,7 @@ const SearchBar = (prop) => {
                 name="searchedBook"
                 value={prop.search}
                 onChange={prop.handleInputChange}
+                onKeyPress={prop.handleKeyPress}
 
 
             />

@@ -36,6 +36,18 @@ const Home = () => {
             })
     }
 
+    const handleKeyPress = (event) => {
+        if(event.key === 'Enter') {
+            API.getBook(dataSearch.searchedBook)
+            .then(response => {
+                setDataSearch({
+                    ...dataSearch,
+                    books: response.data.items
+                })
+            })
+        }
+    }
+
 
 
     const handleSavedBook = (book) => {
@@ -60,7 +72,7 @@ const Home = () => {
 
     return (
         <Wrapper>
-            <SearchBar handleSubmit={handleSubmit} handleInputChange={handleSearchChange} search={dataSearch.searchedBook} />
+            <SearchBar handleSubmit={handleSubmit} handleInputChange={handleSearchChange} search={dataSearch.searchedBook} handleKeyPress={handleKeyPress} />
             {dataSearch.books.length > 0 ? dataSearch.books.map(book => {
                 return (
                     <BookCard book={book} handleSavedBook={handleSavedBook} />
